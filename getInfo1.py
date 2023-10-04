@@ -29,6 +29,8 @@ while True:
         print('Error fetching PRs: {}'.format(response.status_code))
         break
 
+
+
 #get date range between which we have to find PR details
 get_author=False
 print("Enter Range of Date between which you have to fetch data")
@@ -95,6 +97,7 @@ for pr in all_pull_requests:
             print('Time taken to merge the PR :',date_difference)
             print('---')
 
+
 if len(data)==0:
     print("No data found to write!")
     exit(0)
@@ -118,4 +121,3 @@ with open(csv_file, 'w',encoding='utf8', newline='') as file:
 
 print(f'Data written to {csv_file}')
 
-# Optional: You can process or store the PR details as needed.
